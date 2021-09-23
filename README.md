@@ -59,7 +59,7 @@ You may use the sample extensions.xml file included in this project if you'd lik
 
 ### Step 3
 
-Create a configuration file for the plugin.  This file contains temporary credentials which will work for the duration of ApacheCon against our public Gradle Enterprise instance.  Note that this instance will not be available after the show, but you can always contact us to set up another one!
+Create a configuration file for the plugin in .mvn called gradle-enterprise.xml.  This file contains temporary credentials which will work for the duration of ApacheCon against our public Gradle Enterprise instance.  Note that this instance will not be available after the show, but you can always contact us to set up another one!
 
 ```
 <gradleEnterprise>
