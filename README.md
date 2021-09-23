@@ -106,7 +106,3 @@ The second will run the same build again, but will pull reusable entries from th
 
 ### Step 6
 
-Take a screenshot of your scan with the Avoidance savings percentage showing and post it to our **#sponsor-gradle** (https://apachecon.slack.com/archives/C02EVP12THA) channel in the ApacheCon Slack.  If you'd rather not post to the slack, you can also email the screenshot to us at: 
->training-team@gradle.com  
-
-An hour after the contest begins, the participant with the highest Avoidance savings will win!  Winners will be contacted via the HopIn platform to arrange shipping of prizes.
