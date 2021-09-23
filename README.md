@@ -104,5 +104,4 @@ The second will run the same build again, but will pull reusable entries from th
 
 ![Build Scan Avoidance Savings](build-scan-performance-goals.jpg)
 
-### Step 6
 
