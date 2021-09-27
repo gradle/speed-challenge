@@ -1,9 +1,77 @@
-# Maven Build Speed Challenge
+# Gradle and Maven Build Speed Challenge
+
+## Quick Links
+
+- [Instructions for Gradle](#instructions-for-gradle)
+- [Instructions for Maven](#instructions-for-maven)
+
 ## How It Works
 
-Contestants will get a chance to speed up their Maven builds by trying out our Maven Build Cache (https://docs.gradle.com/enterprise/maven-build-cache/) and can verify their results using our free Maven Build Scan(tm)(https://scans.gradle.com/).
+Contestants will get a chance to speed up their Gradle and Maven builds by trying out our Gradle (https://docs.gradle.org/current/userguide/build_cache.html) or Maven (https://docs.gradle.com/enterprise/maven-build-cache/) Build Cache and can verify their results using our free Build Scan(tm)(https://scans.gradle.com/).
 
-To participate, all you'll need to do is add the free Gradle Enterprise extension to the Maven project of your choice and connect to our contest events server. You'll run a cached build, and post a screenshot of your cache savings from the free Build Scan(tm) interface.  The user with the highest cache avoidance savings % per-round will win!
+To participate, all you'll need to do is enable caching in scanning in Gradle, or add the free Gradle Enterprise extension to the Maven project of your choice and connect to our contest events server. You'll run a cached build, and post a screenshot of your cache savings from the free Build Scan(tm) interface.  The user with the highest cache avoidance savings % per-round will win!
+
+# Instructions for Gradle
+
+### Step 1 
+
+Start with the Gradle project of your choice.  If you'd rather not use a real project that you are working on, feel free to clone an open source one!  Note that project details such as dependencies, console lofs, and failure messages will be captured during the scan.  Here's everything that the scan will pick up:  (https://docs.gradle.com/enterprise/gradle-plugin/#captured_information)
+
+Here are some alternatives, but remember any Gradle project will do!
+
+ - Spring example project for Gradle:  https://github.com/spring-guides/gs-gradle
+ - Mockito OSS Project: https://github.com/mockito/mockito
+ - Groovy OSS Project:  https://github.com/apache/groovy
+
+### Step 2
+
+Connect your project to our events server by adding the following to your settings.gradle file:
+
+```
+plugins {
+   id 'com.gradle.enterprise' version '3.7'
+}
+
+ ...
+
+gradleEnterprise {
+    server = "https://events.gradle.com/"
+}
+```
+You may use the sample settings.gradle file included in this project if you'd like.
+
+
+### Step 3
+
+Enable caching in your build by adding the following to your gradle.properties file:
+
+```
+org.gradle.caching=true
+```
+You may use the sample gradle.properties file included in this project if you'd like.
+
+### Step 4
+
+Run a build with the standard:
+
+>gradle build
+
+Or you can use the gradlew wrapper if you prefer. The first build will get a baseline score, and will publish a Build Scan(tm) for you to view. Feel free to check it out! For the contest, the most important screen will be Performance -> Task execution -> Avoidance Savings:
+
+![Build Scan Avoidance Savings without Caching for Gradle](build-scan-performance-goals-0-avoid-gradle.jpg)
+
+The first time you run it, nothing will have been cached, so your avoidance will be 0% on the first pass.
+
+### Step 5
+
+Run the build again, using the same command you used in Step 4. This will run the same build again, but will pull reusable entries from the Gradle Build Cache.  This time you should see significant avoidance savings!
+
+![Build Scan Avoidance Savings](build-scan-performance-goals-gradle.jpg)
+
+See the event organizer for information on how to publish your results.
+
+
+# Instructions for Maven
 
 ### Step 1
 
@@ -104,4 +172,5 @@ The second will run the same build again, but will pull reusable entries from th
 
 ![Build Scan Avoidance Savings](build-scan-performance-goals.jpg)
 
+See the event organizer for information on how to publish your results.
 

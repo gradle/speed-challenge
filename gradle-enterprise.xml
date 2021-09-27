@@ -1,0 +1,16 @@
+<gradleEnterprise>
+    <server>
+        <url>https://events.gradle.com/</url>
+    </server>
+    <buildCache>
+        <remote>
+            <storeEnabled>false</storeEnabled>
+            <server>
+                <credentials>
+                    <username>mavenspeed</username>
+                    <password>m@\/3n$43eC!</password>
+                </credentials>
+            </server>
+        </remote>
+    </buildCache>
+</gradleEnterprise>
