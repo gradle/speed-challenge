@@ -25,8 +25,13 @@ Here are some alternatives, but remember any Gradle project will do!
 
 ### Step 2
 
-Connect your project to our events server by adding the following to your settings.gradle file:
+Note:  For instructions on **Gradle 5.x and previous**, please see the instructions here: https://docs.gradle.com/enterprise/gradle-plugin/ 
 
+Connect your project to our events server by adding the following to your settings.gradle or settings.gradle.kts file:
+
+**Groovy**
+
+settings.gradle
 ```
 plugins {
    id 'com.gradle.enterprise' version '3.7'
@@ -40,6 +45,20 @@ gradleEnterprise {
 ```
 You may use the sample settings.gradle file included in this project if you'd like.
 
+**Kotlin**
+
+settings.gradle.kts
+```
+plugins {
+  id("com.gradle.build-scan").version("3.7")
+}
+
+...
+
+gradleEnterprise {
+    server = "https://events.gradle.com/"
+}
+```
 
 ### Step 3
 
