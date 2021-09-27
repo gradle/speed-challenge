@@ -15,7 +15,7 @@ To participate, all you'll need to do is enable caching in scanning in Gradle, o
 
 ### Step 1 
 
-Start with the Gradle project of your choice.  If you'd rather not use a real project that you are working on, feel free to clone an open source one!  Note that project details such as dependencies, console lofs, and failure messages will be captured during the scan.  Here's everything that the scan will pick up:  (https://docs.gradle.com/enterprise/gradle-plugin/#captured_information)
+Start with the Gradle project of your choice.  If you'd rather not use a real project that you are working on, feel free to clone an open source one!  Note that project details such as dependencies, console logs, and failure messages will be captured during the scan.  Here's everything that the scan will pick up:  (https://docs.gradle.com/enterprise/gradle-plugin/#captured_information)
 
 Here are some alternatives, but remember any Gradle project will do!
 
@@ -25,7 +25,7 @@ Here are some alternatives, but remember any Gradle project will do!
 
 ### Step 2
 
-Note:  For instructions on **Gradle 5.x and previous**, please see the instructions here: https://docs.gradle.com/enterprise/gradle-plugin/ 
+Note:  These instructions are for Gradle 6.x and above.  For instructions on **Gradle 5.x and previous**, please see the instructions here: https://docs.gradle.com/enterprise/gradle-plugin/ 
 
 Connect your project to our events server by adding the following to your settings.gradle or settings.gradle.kts file:
 
@@ -71,7 +71,7 @@ You may use the sample gradle.properties file included in this project if you'd 
 
 ### Step 4
 
-Run a build with the standard:
+Run a build with the standard command:
 
 >gradle build
 
@@ -146,7 +146,7 @@ You may use the sample extensions.xml file included in this project if you'd lik
 
 ### Step 3
 
-Create a configuration file for the plugin in .mvn called gradle-enterprise.xml.  This file contains temporary credentials which will work for the duration of ApacheCon against our public Gradle Enterprise instance.  Note that this instance will not be available after the show, but you can always contact us to set up another one!
+Create a configuration file for the plugin in .mvn called gradle-enterprise.xml.  This file contains temporary credentials which will work for the duration of the event against our public Gradle Enterprise instance.  Note that this instance may not be available after the event, but you can always contact us to set up another one.  You may continue to run the Maven Build Scan(tm) public service by removing the gradle-enterprise.xml file post-event.
 
 ```
 <gradleEnterprise>
