@@ -7,9 +7,9 @@
 
 ## How It Works
 
-Contestants will get a chance to speed up their Gradle and Maven builds by trying out our Gradle (https://docs.gradle.org/current/userguide/build_cache.html) or Maven (https://docs.gradle.com/enterprise/maven-build-cache/) Build Cache and can verify their results using our free Build Scan(tm)(https://scans.gradle.com/).
+Challengers will get a chance to speed up their Gradle and Maven builds by trying out our Gradle (https://docs.gradle.org/current/userguide/build_cache.html) or Maven (https://docs.gradle.com/enterprise/maven-build-cache/) Build Cache and can verify their results using our free Build Scan(tm)(https://scans.gradle.com/).
 
-To participate, all you'll need to do is enable caching in scanning in Gradle, or add the free Gradle Enterprise extension to the Maven project of your choice and connect to our contest events server. You'll run a cached build, and post a screenshot of your cache savings from the free Build Scan(tm) interface.  The user with the highest cache avoidance savings % per-round will win!
+To participate, all you'll need to do is enable caching in scanning in Gradle, or add the free Gradle Enterprise extension to the Maven project of your choice and connect to our contest events server. You'll run a cached build and email us a screenshot of your cache savings from the free Build Scan(tm) interface. 
 
 # Instructions for Gradle
 
@@ -87,8 +87,7 @@ Run the build again, using the same command you used in Step 4. This will run th
 
 ![Build Scan Avoidance Savings](build-scan-performance-goals-gradle.jpg)
 
-See the event organizer for information on how to publish your results.
-
+Take a screenshot and send it to speedchallenge@gradle.com to complete the challenge and claim your swag!
 
 # Instructions for Maven
 
@@ -191,5 +190,5 @@ The second will run the same build again, but will pull reusable entries from th
 
 ![Build Scan Avoidance Savings](build-scan-performance-goals.jpg)
 
-See the event organizer for information on how to publish your results.
+Take a screenshot and send it to speedchallenge@gradle.com to complete the challenge and claim your swag!
 
