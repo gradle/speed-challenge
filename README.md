@@ -50,7 +50,7 @@ You may use the sample settings.gradle file included in this project if you'd li
 settings.gradle.kts
 ```
 plugins {
-  id("com.gradle.build-scan").version("3.7")
+  id("com.gradle.enterprise").version("3.7")
 }
 
 ...
