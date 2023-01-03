@@ -105,6 +105,8 @@ This will run the same build again, but will pull reusable entries from the Grad
 
 ![Build Scan Avoidance Savings](build-scan-performance-goals-gradle.jpg)
 
+### Step 6
+
 Take a screenshot and send it to speedchallenge@gradle.com to complete the challenge and claim your swag!
 
 # Instructions for Maven
@@ -212,6 +214,8 @@ Run the build again, using the same command:
 The second will run the same build again, but will pull reusable entries from the Maven Build Cache.  This time you should see significant avoidance savings, visible through the Performance Tab as described in Step 4 above!
 
 ![Build Scan Avoidance Savings](build-scan-performance-goals.jpg)
+
+### Step 6
 
 Take a screenshot and send it to speedchallenge@gradle.com to complete the challenge and claim your swag!
 
