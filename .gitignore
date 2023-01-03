@@ -1,3 +1,5 @@
 .gradle
 .project
 .settings
+settings.json
+
