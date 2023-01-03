@@ -81,10 +81,10 @@ Or you can use the gradlew wrapper if you prefer. The first build will get a bas
  $ gradle build --scan
 
 BUILD SUCCESSFUL in 1s
-9 actionable tasks: 9 executed
+10 actionable tasks: 10 executed
 
-Publishing build scan...
-https://events.gradle.com/s/dgvcb633be24i <--
+Publishing build scan...                   <---| Publishes Build Scan
+https://events.gradle.com/s/dgvcb633be24i  <---| Outputs URL
 ```
 
 Feel free to check it out! For the contest, the most important screen will be Performance -> Task execution -> Avoidance Savings:
@@ -192,8 +192,8 @@ The first build will get a baseline score, and will publish a Build Scan(tm) for
 [INFO] ------------------------------------------------------------------------
 [INFO] 10 goals, 10 executed
 [INFO] 
-[INFO] Publishing build scan...
-[INFO] https://events.gradle.com/s/qqrqortxcnexg <--
+[INFO] Publishing build scan...                   <---| Publishes Build Scan
+[INFO] https://events.gradle.com/s/qqrqortxcnexg  <---| Outputs URL
 [INFO] 
 ```
 
