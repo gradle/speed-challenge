@@ -134,7 +134,7 @@ If the file already exists, just add the 'extension' XML block to whatever is al
     <extension>
         <groupId>com.gradle</groupId>
         <artifactId>gradle-enterprise-maven-extension</artifactId>
-        <version>1.11</version>
+        <version>1.16.1</version>
     </extension>
 
   ...
