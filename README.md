@@ -34,7 +34,7 @@ Connect your project to our events server by adding the following to your settin
 settings.gradle
 ```
 plugins {
-   id 'com.gradle.enterprise' version '3.7'
+   id 'com.gradle.enterprise' version '3.12.1'
 }
 
  ...
@@ -50,7 +50,7 @@ You may use the sample settings.gradle file included in this project if you'd li
 settings.gradle.kts
 ```
 plugins {
-  id("com.gradle.build-scan").version("3.7")
+  id("com.gradle.build-scan").version("3.12.1")
 }
 
 ...
@@ -119,7 +119,7 @@ Create a file called extensions.xml inside of the .mvn directory, if it doesn't 
     <extension>
         <groupId>com.gradle</groupId>
         <artifactId>gradle-enterprise-maven-extension</artifactId>
-        <version>1.11</version>
+        <version>1.16.1</version>
     </extension>
 </extensions>
 ```
