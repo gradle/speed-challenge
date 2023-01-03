@@ -71,11 +71,23 @@ You may use the sample gradle.properties file included in this project if you'd 
 
 ### Step 4
 
-Run a build with the standard command:
+Run a build with a Build Scan:
 
->gradle build
+>gradle build --scan
 
-Or you can use the gradlew wrapper if you prefer. The first build will get a baseline score, and will publish a Build Scan(tm) for you to view. Feel free to check it out! For the contest, the most important screen will be Performance -> Task execution -> Avoidance Savings:
+Or you can use the gradlew wrapper if you prefer. The first build will get a baseline score, and will publish a Build Scan(tm) for you to view. You will see a URL to the Build Scan in your build output which you can follow to view the Build Scan:
+
+```
+ $ gradle build --scan
+
+BUILD SUCCESSFUL in 1s
+9 actionable tasks: 9 executed
+
+Publishing build scan...
+https://events.gradle.com/s/dgvcb633be24i <--
+```
+
+Feel free to check it out! For the contest, the most important screen will be Performance -> Task execution -> Avoidance Savings:
 
 ![Build Scan Avoidance Savings without Caching for Gradle](build-scan-performance-goals-0-avoid-gradle.jpg)
 
@@ -83,7 +95,13 @@ The first time you run it, nothing will have been cached, so your avoidance will
 
 ### Step 5
 
-Run the build again, using the same command you used in Step 4. This will run the same build again, but will pull reusable entries from the Gradle Build Cache.  This time you should see significant avoidance savings!
+Run a clean build with a Build Scan turned on: 
+
+```
+gradle clean build --scan
+```
+
+This will run the same build again, but will pull reusable entries from the Gradle Build Cache.  This time you should see significant avoidance savings, visible through the Performance Tab as described in Step 4 above.
 
 ![Build Scan Avoidance Savings](build-scan-performance-goals-gradle.jpg)
 
@@ -152,17 +170,6 @@ Create a configuration file for the plugin in .mvn called gradle-enterprise.xml.
     <server>
         <url>https://events.gradle.com/</url>
     </server>
-    <buildCache>
-        <remote>
-            <storeEnabled>false</storeEnabled>
-            <server>
-                <credentials>
-                    <username>mavenspeed</username>
-                    <password>m@\/3n$43eC!</password>
-                </credentials>
-            </server>
-        </remote>
-    </buildCache>
 </gradleEnterprise>
 ```
 
@@ -174,7 +181,23 @@ Run the first build with:
 
 >mvn clean verify
 
-The first build will get a baseline score, and will publish a Build Scan(tm) for you to view.  Feel free to check it out!  For the contest, the most important screen will be Performance -> Goal execution -> Avoidance Savings:
+The first build will get a baseline score, and will publish a Build Scan(tm) for you to view. You will see the URL present in the console output of the build:
+
+```
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.480 s
+[INFO] Finished at: 2023-01-03T16:09:28-05:00
+[INFO] ------------------------------------------------------------------------
+[INFO] 10 goals, 10 executed
+[INFO] 
+[INFO] Publishing build scan...
+[INFO] https://events.gradle.com/s/qqrqortxcnexg <--
+[INFO] 
+```
+
+ Feel free to check it out!  For the contest, the most important screen will be Performance -> Goal execution -> Avoidance Savings:
 
 ![Build Scan Avoidance Savings](build-scan-performance-goals-0-avoid.jpg)
 
@@ -186,7 +209,7 @@ Run the build again, using the same command:
 
 >mvn clean verify
 
-The second will run the same build again, but will pull reusable entries from the Maven Build Cache.  This time you should see significant avoidance savings!
+The second will run the same build again, but will pull reusable entries from the Maven Build Cache.  This time you should see significant avoidance savings, visible through the Performance Tab as described in Step 4 above!
 
 ![Build Scan Avoidance Savings](build-scan-performance-goals.jpg)
 
