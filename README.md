@@ -19,8 +19,8 @@ Start with the Gradle project of your choice.  If you'd rather not use a real pr
 
 Here are some alternatives, but remember any Gradle project will do!
 
- - Spring Initializr Gradle Project: ([Spring Initializr](https://start.spring.io/#!type=gradle-project-kotlin&language=java&platformVersion=3.0.1&packaging=jar&jvmVersion=11&groupId=com.speedchallenge&artifactId=gradledemo&name=gradledemo&description=Demo%20project%20for%20the%20Gradle%20and%20Maven%20Speed%20Challenge&packageName=com.speedchallenge.gradledemo))
- - Spring example project for Gradle:  https://github.com/spring-guides/gs-gradle
+ - Create a Spring Initializr Gradle Project: ([Spring Initializr](https://start.spring.io/#!type=gradle-project-kotlin&language=java&platformVersion=3.0.1&packaging=jar&jvmVersion=11&groupId=com.speedchallenge&artifactId=gradledemo&name=gradledemo&description=Demo%20project%20for%20the%20Gradle%20and%20Maven%20Speed%20Challenge&packageName=com.speedchallenge.gradledemo))
+ - Grails OSS Project:  https://github.com/grails/grails-core
  - Mockito OSS Project: https://github.com/mockito/mockito
  - Groovy OSS Project:  https://github.com/apache/groovy
 
@@ -118,7 +118,7 @@ Start with the Maven project of your choice.  If you'd rather not use a real pro
 
 Here are some alternatives, but remember any Maven project will do!
 
-- Spring Initializr Maven Project ([Spring Initializr](https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.0.1&packaging=jar&jvmVersion=11&groupId=com.speedchallenge&artifactId=mavendemo&name=mavendemo&description=Demo%20project%20for%20the%20Gradle%20and%20Maven%20Speed%20Challenge&packageName=com.speedchallenge.mavendemo))
+- Create a Spring Initializr Maven Project ([Spring Initializr](https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.0.1&packaging=jar&jvmVersion=11&groupId=com.speedchallenge&artifactId=mavendemo&name=mavendemo&description=Demo%20project%20for%20the%20Gradle%20and%20Maven%20Speed%20Challenge&packageName=com.speedchallenge.mavendemo))
 - Maven Multi-Module Example (https://github.com/jitpack/maven-modular)
 - Spring Boot Apache Camel Archetype:
 ```
