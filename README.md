@@ -9,7 +9,7 @@
 
 Challengers will get a chance to speed up their Gradle and Maven builds by trying out our Gradle (https://docs.gradle.org/current/userguide/build_cache.html) or Maven (https://docs.gradle.com/enterprise/maven-build-cache/) Build Cache and can verify their results using our free Build Scan(tm)(https://scans.gradle.com/).
 
-To participate, all you'll need to do is enable caching in scanning in Gradle, or add the free Gradle Enterprise extension to the Maven project of your choice and connect to our contest events server. You'll run a cached build and email us a screenshot of your cache savings from the free Build Scan(tm) interface. 
+To participate, all you'll need to do is enable caching in scanning in Gradle, or add the free Develocity extension to the Maven project of your choice and connect to our contest events server. You'll run a cached build and email us a screenshot of your cache savings from the free Build Scan(tm) interface. 
 
 # Instructions for Gradle
 
@@ -167,7 +167,7 @@ You may use the sample extensions.xml file included in this project if you'd lik
 
 ### Step 3
 
-Create a configuration file for the plugin in .mvn called gradle-enterprise.xml.  This file contains temporary credentials which will work for the duration of the event against our public Gradle Enterprise instance.  Note that this instance may not be available after the event, but you can always contact us to set up another one.  You may continue to run the Maven Build Scan(tm) public service by removing the gradle-enterprise.xml file post-event.
+Create a configuration file for the plugin in .mvn called gradle-enterprise.xml.  This file contains temporary credentials which will work for the duration of the event against our public Develocity instance.  Note that this instance may not be available after the event, but you can always contact us to set up another one.  You may continue to run the Maven Build Scan(tm) public service by removing the gradle-enterprise.xml file post-event.
 
 ```
 <gradleEnterprise>
