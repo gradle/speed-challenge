@@ -128,62 +128,22 @@ mvn archetype:generate \
 ```
 - Maven Build Scan Quickstart (https://github.com/gradle/maven-build-scan-quickstart)
 
-Create a hidden directory (if it doesn't already exist) in the project root called .mvn.  You can use your IDE.  Alternatively, in Windows you can use the File Explorer, or for Linux/Mac/UNIX you can run:
-
->mkdir .mvn
-
 ### Step 2
 
-Create a file called extensions.xml inside of the .mvn directory, if it doesn't already exist, and add the following code snippet:
+Add the Develocity Maven Extension and configure it to use the `events.gradle.com` server, run:
 
+```sh
+mvn com.gradle:gradle-enterprise-maven-extension:1.20.1:init \
+  -Dgradle.enterprise.url=https://events.gradle.com
 ```
-<extensions>
-    <extension>
-        <groupId>com.gradle</groupId>
-        <artifactId>gradle-enterprise-maven-extension</artifactId>
-        <version>1.16.1</version>
-    </extension>
-</extensions>
-```
-
-If the file already exists, just add the 'extension' XML block to whatever is already there:
-
-```
-<extensions>
-
-   ...
-
-    <extension>
-        <groupId>com.gradle</groupId>
-        <artifactId>gradle-enterprise-maven-extension</artifactId>
-        <version>1.16.1</version>
-    </extension>
-
-  ...
-
-</extensions>
-```
-You may use the sample extensions.xml file included in this project if you'd like.
 
 ### Step 3
 
-Create a configuration file for the plugin in .mvn called gradle-enterprise.xml.  This file contains temporary credentials which will work for the duration of the event against our public Develocity instance.  Note that this instance may not be available after the event, but you can always contact us to set up another one.  You may continue to run the Maven Build Scan(tm) public service by removing the gradle-enterprise.xml file post-event.
-
-```
-<gradleEnterprise>
-    <server>
-        <url>https://events.gradle.com/</url>
-    </server>
-</gradleEnterprise>
-```
-
-You may use the sample gradle-enterprise.xml file included if you'd like.
-
-### Step 4
-
 Run the first build with:
 
->mvn clean verify
+```
+mvn clean verify
+```
 
 The first build will get a baseline score, and will publish a Build Scan(tm) for you to view. You will see the URL present in the console output of the build:
 
@@ -207,7 +167,7 @@ The first build will get a baseline score, and will publish a Build Scan(tm) for
 
 The first time you run it, nothing will have been cached, so your avoidance will be 0% on the first pass.
 
-### Step 5
+### Step 4
   
 Run the build again, using the same command:
 
@@ -217,7 +177,7 @@ The second will run the same build again, but will pull reusable entries from th
 
 ![Build Scan Avoidance Savings](build-scan-performance-goals.jpg)
 
-### Step 6
+### Step 5
 
 Take a screenshot and send it to speedchallenge@gradle.com to complete the challenge and claim your swag!
 
